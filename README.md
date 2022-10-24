@@ -7,7 +7,7 @@ Toy e2e mailing service for a blog post. This is a very rough approximation of h
 ### [temporalio](https://temporal.io/):
 
 temporal is great for "long running" workflows. Often, our most critical pieces of business logic are complex, asyncronous, stateful workflows. Temporal abstracts the complexity of managing workflow state, timers, queues and retries and lets users focus on business logic.
-Emails are one of the many business logic adjacent pieces that often get interwoven with our "business logic code" and they're often highly asyncronous (think of reminder emails for example) - temporal lets us interlieve our email logic with our business logic through without bloat like retry logic, scheduling etc. Its also agnostic about the deployment of our workflows so email workers can run entirely as services and be called remotely form our application code.
+Emails are one of the many business logic adjacent pieces that often get interwoven with our "business logic code" and they're often highly asyncronous (think of reminder emails for example) - temporal lets us interlieve our email logic with our application logic. Its also agnostic about the deployment of our workflows so email workers can run entirely as services and be called remotely form our application code.
 For this demo we have a single workflow called `signup` which, when started, will send the user a welcome email, sleep for 30 days and then send them a "your trial is expiring email".
 
 ## [MJML](https://mjml.io/):
