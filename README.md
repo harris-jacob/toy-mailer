@@ -36,7 +36,7 @@ To get this working you'll need a SendGrid account, signup for their free tier, 
 
 ## Getting started
 
-This project is managed with [pnpm](https://pnpm.io/). Also `docker` & `docker compose` is required to run the temporal server locally.
+This project is managed with [pnpm](https://pnpm.io/). Also `docker` & `docker compose` is required to run the temporal server locally. The temporal docker compose file requires some environment variables, to use the same version of everything as me, just copy the top level `.env.template` to `.env`.
 
 To install dependencies:
 
