@@ -4,11 +4,13 @@ const clean = require("gulp-clean");
 const mjml = require("gulp-mjml");
 const mjmlEngine = require("mjml");
 const replace = require("gulp-replace");
+const server = require("live-server");
+
 
 const directoryNames = {
     build: "build",
-    source: "emails",
-    components: "components"
+    source: "emails/*",
+    components: "components/*"
 }
 
 /*
@@ -21,14 +23,15 @@ const constants = {
 }
 
 /**
- * Replace template variables e.g. {{CONSTANT}}
- * with the value from the constants object. If no 
- * value is returned, just returns the template variable
+ * Replace template variables e.g. {{VALUE}}
+ * with the corresponding value from the constants object or 
+ * if, no matching costant key is found, returns the value in 
+ * the eta template format
  */
-function replaceConstantPlaceHolders () {
+function templateVariables() {
   return replace(/\{\{(.*?)\}\}/g, (_, p1) => {
     const value = constants[p1];
-    return value ? value : p1;
+    return value ? value : `<%= it.${p1} %>`;
   });
 };
 
@@ -50,11 +53,28 @@ function clear() {
 
 function html() {
     return gulp
-        .src(["./emails/*"])
+        .src([directoryNames.source])
         .pipe(mjml(mjmlEngine, {validationLevel: "strict"}))
-        // .pipe(replaceConstantPlaceHolders())
-        .pipe(gulp.dest("./build"))
+        .pipe(templateVariables())
+        .pipe(gulp.dest(directoryNames.build))
 }
 
-exports.default = gulp.series(html);
+function watchFiles() {
+    return gulp
+         .watch([directoryNames.source, directoryNames.components],
+            html)
+}
+
+async function serve() {
+    return server.start({
+        root: directoryNames.build,
+        port: 3000
+    })
+}
+
+
+
+exports.default = gulp.series(clear, directories, html);
+exports.watch = gulp.series(clear, directories, html, gulp.parallel([serve, watchFiles]))
+
 exports.clean = clear;

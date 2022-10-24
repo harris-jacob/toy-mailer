@@ -1,0 +1,24 @@
+<mjml>
+  <mj-head>
+    <mj-title>Welcome to example.com</mj-title>
+    <mj-preview>You have started your one month free trial</mj-preview>
+  </mj-head>
+  <mj-body>
+    <mj-include path="../components/header.mjml" />
+    <mj-section>
+      <mj-column padding-top="20px">
+        <mj-text font-size="14px">
+          <h2>Hello {{name}}, welcome to example.com.</h2>
+          <p>
+            We hope you enjoy your free trial of our service. Be sure to check
+            out our premium features. You will be notified when your trial is
+            expiring and automatically downgraded to our free tier. But, you can
+            upgrade at anytime.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-include path="../components/benefits.mjml" />
+    <mj-include path="../components/footer.mjml" />
+  </mj-body>
+</mjml>

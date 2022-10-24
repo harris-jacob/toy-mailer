@@ -1,0 +1,18 @@
+<mj-section background-color="#1E1E24">
+  <mj-column vertical-align="middle" width="100%">
+    <mj-navbar ico-color="#ffffff">
+      <mj-navbar-link href="mailto:{{EMAIL}}" color="#ffffff"
+        >Contact us</mj-navbar-link
+      >
+      <mj-navbar-link href="{{WEBSITE_URL}}/account" color="#ffffff"
+        >Account</mj-navbar-link
+      >
+      <mj-navbar-link href="{{WEBSITE_URL}}" color="#ffffff"
+        >Homepage</mj-navbar-link
+      >
+      <mj-navbar-link href="{{WEBSITE_URL}}/terms" color="#ffffff"
+        >Terms & conditions</mj-navbar-link
+      >
+    </mj-navbar>
+  </mj-column>
+</mj-section>

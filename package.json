@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build:all": "pnpm run -r build",
+    "dev:templates": "pnpm run --filter 'templates' dev",
+    "start:worker": "pnpm run --filter 'mail-service' start:worker",
+    "start:server": "pnpm run --filter 'mail-service' start:server"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"

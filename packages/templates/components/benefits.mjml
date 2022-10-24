@@ -1,0 +1,79 @@
+<mj-section padding-top="40px" padding-bottom="10px">
+  <mj-column>
+    <mj-text>
+      <h2>Paid subscription benefits</h2>
+      <p>Bellow you'll find a list of the benefits of our paid subscription</p>
+    </mj-text>
+  </mj-column>
+</mj-section>
+<mj-section background-color="#21A179" padding-bottom="20px">
+  <mj-column vertical-align="middle" width="20%">
+    <mj-image
+      alt="lots of money"
+      padding="0"
+      width="40px"
+      src="https://cdn-icons-png.flaticon.com/512/2953/2953363.png"
+    />
+    />
+  </mj-column>
+  <mj-column vertical-align="middle" width="80%">
+    <mj-text color="white">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+        suscipit velit tincidunt commodo hendrerit. In interdum nunc sit amet
+        volutpat tempor.
+      </p>
+    </mj-text>
+  </mj-column>
+  <mj-column vertical-align="middle" width="20%">
+    <mj-image
+      alt="high speed"
+      padding="0"
+      width="40px"
+      src="https://cdn-icons-png.flaticon.com/512/53/53128.png"
+    />
+  </mj-column>
+  <mj-column vertical-align="middle" width="80%">
+    <mj-text color="white">
+      <p>
+        Donec aliquam blandit sollicitudin. Donec in porttitor risus, auctor
+        maximus sapien. Donec convallis lectus lacus, quis imperdiet mauris
+        facilisis sed
+      </p>
+    </mj-text>
+  </mj-column>
+  <mj-column vertical-align="middle" width="20%">
+    <mj-image
+      alt="weighing scales"
+      padding="0"
+      width="40px"
+      src="https://cdn-icons-png.flaticon.com/512/1153/1153269.png"
+    />
+  </mj-column>
+  <mj-column vertical-align="middle" width="80%">
+    <mj-text color="white">
+      <p>
+        Nullam nec ante lacus. Etiam dapibus ante nisl, vel sodales nulla tempus
+        ut. Aenean malesuada neque in leo faucibus maximus. Phasellus a pharetra
+        ex, et ullamcorper mi.
+      </p>
+    </mj-text>
+  </mj-column>
+  <mj-column vertical-align="middle" width="20%">
+    <mj-image
+      alt="global reach"
+      padding="0"
+      width="40px"
+      src="https://cdn-icons-png.flaticon.com/512/900/900782.png"
+    />
+  </mj-column>
+  <mj-column vertical-align="middle" width="80%">
+    <mj-text color="white">
+      <p>
+        Integer dolor nisl, faucibus non orci vel, consequat fermentum velit.
+        Mauris at turpis ac turpis molestie venenatis. Donec laoreet vehicula
+        libero a placerat.
+      </p>
+    </mj-text>
+  </mj-column>
+</mj-section>

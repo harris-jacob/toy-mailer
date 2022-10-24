@@ -1,8 +1,6 @@
-<mj-section background-url="https://img.freepik.com/free-photo/aerial-shot-beautiful-tree-forest-covered-with-fog-bled-slovenia_181624-7925.jpg?w=900&t=st=1666472556~exp=1666473156~hmac=db3f874db2a477c4ce6814ef358d74fff19f4f9ea8dd161ba8aa7a029ad02a2e" padding-top="20px">
+<mj-section background-color="#1E1E24">
   <mj-column>
-  <mj-text>
- <a href="https://www.freepik.com/free-photo/aerial-shot-beautiful-tree-forest-covered-with-fog-bled-slovenia_9184586.htm#query=background&position=2&from_view=keyword">Image by wirestock</a> on Freepik 
-  <mj-text/>
+    <mj-text align="center" color="#fff"> <h1>example.com</h1> </mj-text>
     <mj-divider border-width="1px" border-color="#c7c9cd" />
   </mj-column>
 </mj-section>
