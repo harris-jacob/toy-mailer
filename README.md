@@ -6,13 +6,13 @@ Toy e2e mailing service for a blog post. This is a very rough approximation of h
 
 ### [temporalio](https://temporal.io/):
 
-temporal is great for "long running" workflows. Often, our most critical pieces of business logic are complex, asyncronous, stateful workflows. Temporal abstracts the complexity of managing workflow state, timers, queues and retries and lets users focus on business logic.
-Emails are one of the many business logic adjacent pieces that often get interwoven with our "business logic code" and they're often highly asyncronous (think of reminder emails for example) - temporal lets us interlieve our email logic with our application logic. Its also agnostic about the deployment of our workflows so email workers can run entirely as services and be called remotely form our application code.
+temporal is great for "long running" workflows. Often, our most critical pieces of business logic are complex, asynchronous, stateful workflows. Temporal abstracts the complexity of managing workflow state, timers, queues and retries and lets users focus on business logic.
+Emails are one of the many business logic adjacent pieces that often get interwoven with our "business logic code" and they're often highly asynchronous (think of reminder emails for example) - temporal lets us interleave our email logic with our application logic. Its also agnostic about the deployment of our workflows so email workers can run entirely as services and be called remotely form our application code.
 For this demo we have a single workflow called `signup` which, when started, will send the user a welcome email, sleep for 30 days and then send them a "your trial is expiring email".
 
 ## [MJML](https://mjml.io/):
 
-MJML is an XML based templating language that is purpose built for emails. Emails are often called the "wild west" of frontend (which is really saying something). Most email clients do not support modern browser CSS or even HTML syntax. I really wouldn't advise writting emails in plain HTML since it can be very difficult to build complient emails (outlook HTML is pretty much an entirely new templating language in itself). MJML lets you write neat templates that will compile to email complient HTML and embedded CSS.
+MJML is an XML based templating language that is purpose built for emails. Emails are often called the "wild west" of frontend (which is really saying something). Most email clients do not support modern browser CSS or even HTML syntax. I really wouldn't advise writing emails in plain HTML since it can be very difficult to build compliant emails (outlook HTML is pretty much an entirely new templating language in itself). MJML lets you write neat templates that will compile to email compliant HTML and embedded CSS.
 For this project, the MJML templates are built using gulp (because it had an mjml plugin, and is actually pretty clean).
 
 ## [nodejs/express](https://nodejs.org/en/):
@@ -21,7 +21,7 @@ I picked node because I knew it would be the fastest thing to get "working" and 
 
 ## [SendGrid](https://sendgrid.com/)
 
-Actually sending emails requires a mail server which is not a trivial thing to setup (I don't even know if its possible for the average person/company) so we are beholden to third party services like AWS SES, mailgun, mailjet & SendGrid. Any of these will do in practise, I just chose SendGrid because they had a node package (so no SMTP), their startup process was straightforward and, most importantly, they had a free tier (100 emails per month).
+Actually sending emails requires a mail server which is not a trivial thing to setup (I don't even know if its possible for the average person/company) so we are beholden to third party services like AWS SES, mailgun, mailjet & SendGrid. Any of these will do in practice, I just chose SendGrid because they had a node package (so no SMTP), their startup process was straightforward and, most importantly, they had a free tier (100 emails per month).
 
 ## project-structure
 
